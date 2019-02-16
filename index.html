@@ -15,33 +15,58 @@
 </head>
 <body>
     <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-          <div class="container">
-            <a class="navbar-brand" href="#">Hungarian Flash Cards</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="QQLINK">QQLINK</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Hungarian Flash Cards</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" onclick="load_set('week1');">Week1</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <!-- Page Content -->
 <div class="container">
-QQBODY
+    <div class="row">
+        <h1>&nbsp;</h1>
+        <h1>&nbsp;</h1>
+    </div>
+<div class="row">
+    <div class="col-12 col-md-6 text-center">
+        <br>
+    <p>Starting Language</p>
+    <button id="english" onclick="switch_lang('English');" class="btn btn-secondary disabled">English</button>
+    <button id="magyar" onclick="switch_lang('Magyar');" class="btn btn-primary">Magyar</button>
+    <br>
+    </div>
 </div>
-<footer class="py-5 bg-dark main-footer">
+<hr>
+<div class="row">
+    <div class="col-12 col-md-6">
+        <div class="card h-100" id="flashcard">
+          <div class="card-body"  onclick="next()">
+            <h1 id="wordarea" class="text-center">WORD</h1>
+            </div>
+        </div>
+    </div>
+
+</div>
+<hr>
+    <p>Tap card for translation, tap again for next word.</p>
+</div>
+<footer class="py-5 bg-dark main-footer fixed-bottom">
   <div class="container">
     <p class="m-0 text-center">
-        QQTERMS
+        MIT License | Code on <a href="https://github.com/philipkiely/Hungarian">GitHub</a>
     </p>
     <hr>
-    <p class="text-center"><a href="https://philipkiely.com">Copyright &copy; <span id="year">2019</span>Philip Kiely</a></p>
+    <p class="text-center"><a href="https://philipkiely.com">Copyright &copy; <span id="year">2019</span> Philip Kiely</a></p>
   </div><!-- /.container -->
 </footer>
 <script src="script.js"></script>
